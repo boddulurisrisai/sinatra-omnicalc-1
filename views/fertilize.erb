@@ -1,0 +1,32 @@
+<html>
+<body>
+
+<form action="/<%= @find %>/results">
+<% if @find == "square" %>
+<div><label for="number1">Enter a number</label></div>
+<div><input id="number1" type="text" name="number1" placeholder="What number do you want"></div>
+<div><button>Calculate <%= @find %></button></div>
+<% elsif @find == "square_root"%>
+<div><label for="number1">Enter a number</label></div>
+<div><input id="number1" type="text" name="root" placeholder="What number do you want"></div>
+<div><button>Calculate square root</button></div>
+<% elsif @find  == "random" %>
+<div><label for="number4">Minimum</label>
+<input id="number4" type="text" name="minimum" placeholder="E.g. 1.5"></div>
+<div><label for="number5">Maximum</label>
+<input id="number5" type="text" name="maximum" placeholder="E.g. 4.5"></div>
+<div><button>Pick random number</button></div>
+
+<% elsif @find  == "payment" %>
+<div><label for="number3">APR</label>
+<input id="number3" type="text" name="apr" placeholder="E.g. 5.42"></div>
+<div><label for="number6">Number of years</label>
+<input id="number6" type="text" name="years" placeholder="How many years to repayment"></div>
+<div><label for="number7">Principal</label>
+<input id="number7" type="text" name="principal" placeholder="How much principal?"></div>
+
+<div><button>Calculate monthly payment</button></div>
+<% end %>
+</form>
+</body>
+</html>
